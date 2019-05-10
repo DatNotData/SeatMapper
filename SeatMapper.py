@@ -1,18 +1,19 @@
 # code that is meant to place people at a round table
 # depends on how much a person wants to sit to another (from 0 to 1)
 
-
+# the peoples used in this file are hypothetical, and nothing is really real, please don't take seriously
 file = open('data.csv','r') # open data file
-data  = file.read()
+data = file.read()
 file.close()
 
-data  = data .split('\n')
-data  = [i.split() for i in data ]
+data = data.split('\n')
+data = [i.split(',') for i in data]
 
-names = data [0] # first line is names
+names = data[0] # first line is names
 data.pop(0)
 
-data  = [[float(j) for j in i] for i in data ] # put values in a table
+print(data)
+data = [[float(j) for j in i] for i in data] # put values in a table
 
 number = len(names)
 
