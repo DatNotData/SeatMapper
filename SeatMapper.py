@@ -8,13 +8,8 @@ file.close()
 
 data = data.split('\n')
 data = [i.split(',') for i in data]
-
-names = data[0] # first line is names
-data.pop(0)
-
-print(data)
-data = [[float(j) for j in i] for i in data] # put values in a table
-
+names = [i[0] for i in data]
+data = [[float(j) for j in i[1:]] for i in data] # put values in a table
 number = len(names)
 
 
